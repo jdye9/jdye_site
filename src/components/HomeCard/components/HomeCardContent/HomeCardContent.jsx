@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import './HomeCardContent.css';
+import * as S from './styles';
 
 export const HomeCardContent = ({
   homecard,
@@ -14,9 +13,8 @@ export const HomeCardContent = ({
   }
 
   return (
-    <div className='homecard-content grow' onClick={onClickHandler}>
+    <S.HomeCardContent onClick={onClickHandler}>
       {homecard.icon}
-    </div>
+    </S.HomeCardContent>
   )
-
-}
+};

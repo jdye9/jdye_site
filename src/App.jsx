@@ -6,13 +6,13 @@ import { ContactMe } from './views/ContactMe/ContactMe'
 import { Projects } from './views/Projects/Projects'
 import { Resume } from './views/Resume/Resume'
 import { AboutMe } from './views/AboutMe/AboutMe'
-import './App.css';
+import * as S from './styles'
 
 function App() {
   return (
-    <div className="app">
+    <S.App>
       <Navbar/>
-      <span className='app-body'>
+      <S.AppBody>
         <Routes>
           <Route exact path="/" element={<Home />}/>
           <Route exact path="/aboutme" element={<AboutMe />}/>
@@ -20,8 +20,8 @@ function App() {
           <Route exact path="/projects" element={<Projects />}/>
           <Route exact path="/resume" element={<Resume />}/>
         </Routes>
-      </span>
-    </div>
+      </S.AppBody>
+    </S.App>
   );
 }
 

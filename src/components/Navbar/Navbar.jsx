@@ -1,12 +1,20 @@
 import React from 'react'
-import './Navbar.css';
 import { Socials } from '../Socials';
+import * as S from './styles';
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    navigate('/');
+  }
+
   return (
-    <div className='nav-bar'>
-      <div className='logo'>Jared Dye</div>
-      <Socials />
-    </div>
+    <S.Navbar>
+      <S.NavbarLogo onClick={onClickHandler}>Jared Dye</S.NavbarLogo>
+      <Socials/>
+    </S.Navbar>
   )
 };

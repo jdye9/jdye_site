@@ -1,6 +1,5 @@
 import React from 'react';
-import { BiRightArrowCircle, BiLeftArrowCircle } from 'react-icons/bi';
-import './HomeCardTitle.css';
+import * as S from './styles';
 
 export const HomeCardTitle = (
   {
@@ -11,21 +10,15 @@ export const HomeCardTitle = (
 ) => {
 
   return (
-    <div className='card-title'> 
-      <BiLeftArrowCircle className='grow arrow' style={{
-          minHeight:'75px',
-          minWidth: '75px',
-          color: '#BF9F9F',
-        }}
-        onClick={onPrevious}/>
+    <S.HomeCardTitle> 
+      <S.HomeCardTitleArrowLeft
+        onClick={onPrevious}
+      />
         {homecard.title} 
-        <BiRightArrowCircle className='grow arrow' style={{
-          minHeight:'75px',
-          minWidth: '75px',
-          color: '#BF9F9F',
-        }}
-        onClick={onNext}/>
-    </div>
+      <S.HomeCardTitleArrowRight
+        onClick={onNext}
+      />
+    </S.HomeCardTitle>
   )
 
 

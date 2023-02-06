@@ -3,7 +3,7 @@ import { HomeCard } from '../../components/HomeCard';
 import { CgProfile } from 'react-icons/cg';
 import { BiNews } from 'react-icons/bi';
 import { GiGearHammer } from 'react-icons/gi';
-import './Home.css';
+import * as S from './styles';
 
 export const Home = () => {
 
@@ -66,7 +66,7 @@ export const Home = () => {
   }
 
   return (
-    <div className='home-root'>
+    <S.Home>
       { homecards.map((homecard,index) => {
         return (
           <HomeCard 
@@ -79,6 +79,6 @@ export const Home = () => {
           />
         )
       })}
-    </div>
+    </S.Home>
   )
 };

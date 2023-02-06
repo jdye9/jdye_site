@@ -1,4 +1,6 @@
-.homecard-content {
+import styled from 'styled-components'
+
+export const HomeCardContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 700px;
@@ -9,13 +11,9 @@
   align-items: center;
   background-color: white;
   width: 100%;
-}
-
-.grow:hover { 
-  transform: scale(1.01);
-  cursor: pointer;
-}
-
-.grow { 
-  transition: all .2s ease-in-out; 
-}
+  transition: all .2s ease-in-out;
+  :hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+`
