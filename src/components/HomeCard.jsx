@@ -1,21 +1,50 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import { BiRightArrowCircle, BiLeftArrowCircle } from 'react-icons/bi';
+
 import './HomeCard.css'
 
 const HomeCard = (props) => {
 
-    let title = props.title
-    let index = props.index
+  const title = props.title;
+  const index = props.index;
+  const icon = props.icon;
+  const active = props.active;
+  const onPreviousHandler = props.onPrevious;
+  const onNextHandler = props.onNext;
 
-    return (
-        <div className='homecard-root grow' style={{ backgroundColor: index % 2 === 0 ? 'white' : '#BF9f9f'}}>
-            <div className='card-title' style={
-                { 
-                    color: index % 2 === 0 ? 'white' : '#BF9f9f',
-                    backgroundColor: index % 2 === 0 ? '#BF9f9f' : 'white'
-                }}> {title} </div>
-                <div className='homecard-content' style={{ backgroundColor: index % 2 === 0 ? '#BF9f9f' : 'white'}}></div>
-        </div>
-    )
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+      const path = title.toLowerCase().replace(/\s/g, '').trim();
+      console.log(path);
+      navigate(path);
+  }
+
+  return (
+    <div className='homecard-root' style={{ 
+        display: index === active ? 'flex' : 'none',
+      }}>
+      <div className='card-title'> 
+      <BiLeftArrowCircle className='grow arrow' style={{
+          minHeight:'75px',
+          minWidth: '75px',
+          color: '#BF9F9F',
+        }}
+        onClick={onPreviousHandler}/>
+        {title} 
+        <BiRightArrowCircle className='grow arrow' style={{
+          minHeight:'75px',
+          minWidth: '75px',
+          color: '#BF9F9F',
+        }}
+        onClick={onNextHandler}/>
+      </div>
+      <div className='homecard-content grow' onClick={onClickHandler}>
+        {icon}
+      </div>
+    </div>
+  );
 }
 
 export default HomeCard

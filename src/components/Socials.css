@@ -9,9 +9,9 @@
     gap: 10px;
 }
 
-.socials a {
+a {
     transition: transform 250ms;
-    color: #BF9f9f; 
+    color: #BF9F9F; 
 }
 
 .socials a:hover {

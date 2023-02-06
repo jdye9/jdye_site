@@ -4,9 +4,9 @@ import Main from './Main';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar/>
-      <span className='App-header'>
+      <span className='app-body'>
         <Main/>
       </span>
     </div>
