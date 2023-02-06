@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+import styled from 'styled-components';
 
-.homecard-root {
-  display: flex;
+export const HomeCard = styled.div`
+  display: ${(props) => props.index === props.active ? 'flex' : 'none' };
   flex-direction: column;
   box-shadow: 0px 0px 6px 1px rgba(0,0,0,.2);
   border-radius: 1rem;
@@ -18,4 +18,4 @@
   background-color: #BF9F9F;
   gap: 20px;
   padding: 1rem;
-}
+`
