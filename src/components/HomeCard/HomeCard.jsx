@@ -4,21 +4,20 @@ import { HomeCardTitle } from './components/HomeCardTitle';
 import * as S from './styles';
 
 export const HomeCard = ({
-  key,
-  index,
   homecard,
   onPrevious,
   onNext,
-  active,
 }) => {
   return (
-    <S.HomeCard index={index} active={active} >
-      <HomeCardTitle 
+    <S.HomeCard>
+      <HomeCardTitle
         homecard={homecard} 
         onPrevious={onPrevious} 
-        onNext={onNext} 
+        onNext={onNext}
       />
-      <HomeCardContent homecard={homecard} />
+      <HomeCardContent 
+        homecard={homecard} 
+      />
     </S.HomeCard>
   );
 };
