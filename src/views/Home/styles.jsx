@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const Home = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 75%;
-  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 50px);
 `

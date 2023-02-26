@@ -1,13 +1,11 @@
 import React from 'react';
 import * as S from './styles';
 
-export const HomeCardTitle = (
-  {
-    homecard,
-    onPrevious,
-    onNext,
-  }
-) => {
+export const HomeCardTitle = ({
+  homecard,
+  onPrevious,
+  onNext,
+}) => {
 
   return (
     <S.HomeCardTitle> 
@@ -19,7 +17,5 @@ export const HomeCardTitle = (
         onClick={onNext}
       />
     </S.HomeCardTitle>
-  )
-
-
+  );
 }

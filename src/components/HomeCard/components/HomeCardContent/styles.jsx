@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const HomeCardContent = styled.div`
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: calc(100vh - 250px);
   border-radius: 1rem;
   box-shadow: 0px 0px 6px 1px rgba(0,0,0,.2);
   position: relative;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
   width: 100%;

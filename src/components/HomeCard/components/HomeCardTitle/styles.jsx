@@ -14,6 +14,7 @@ export const HomeCardTitle = styled.div`
   background-color: white;
   width: 100%;
   font-size: 50px;
+  margin-bottom: 1rem;
 `
 
 export const HomeCardTitleArrowLeft = styled(BiLeftArrowCircle)`
@@ -27,8 +28,8 @@ export const HomeCardTitleArrowLeft = styled(BiLeftArrowCircle)`
 `
 
 export const HomeCardTitleArrowRight = styled(BiRightArrowCircle)`
-  min-height: 75px;
-  min-width: 75px;
+  height: 75px;
+  width: 75px;
   color: '#BF9F9F';
   :hover {
     transform: scale(1.05);
