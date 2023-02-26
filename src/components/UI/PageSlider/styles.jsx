@@ -22,6 +22,7 @@ export const Slider = styled.div`
   background-color: white;
   margin-left: ${(props) => (props.index / props.totalCount * 100) + '%'};
   border-radius: 12px;
+  opacity: 0.5;
   
   @keyframes slidein-middle-right {
     from {
